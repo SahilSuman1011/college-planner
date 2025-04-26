@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import ReviewsSection from "./ReviewsSection";
+import Footer from "./Footer";
+
 import {
   Star,
   MapPin,
@@ -511,10 +513,13 @@ const CollegeDetailPage = () => {
                 <ReviewsSection collegeId={collegeId} />
               </div>
             </section>
+
+          
         
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
