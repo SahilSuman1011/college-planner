@@ -30,12 +30,12 @@ const CollegeDetailPage = () => {
     const collegeDetails = {
       "jnu-jaipur": {
         name: "Jaipur National University",
-        fullName: "Jaipur National University (JNU) Jaipur",
+        fullName: "Jaipur National University Jaipur",
         tagline: "Ranked Among Top Universities in India",
         location: "Jaipur, India", 
         rating: 4.8,
         reviews: 296,
-        approvals: ["UGC", "NAAC", "AICTE"],
+        approvals: ["UGC","AIU", "NCTE","BCI","INC","ICAR","NMC(MCI)","RNC","AICTE",],
         images: [
           "https://images.shiksha.com/mediadata/images/1583911645php0u4sxi.png",
           "https://images.shiksha.com/mediadata/images/1583911675phpAe88Fy.jpeg",
@@ -43,7 +43,7 @@ const CollegeDetailPage = () => {
           "https://www.searchurcollege.com/exam/admin/search/gallery/college/col_694.jpg",
         ],
         description: "Jaipur National University, also referred to as JNU University, was established in 2007 and is located in Jaipur, Rajasthan. Jaipur National University is a self-financed private university. It is a UGC-recognised university and has also been accredited with an 'A+' grade by NAAC. Jaipur National University is ranked at 39th position in the Overall category as per India Today rankings 2024. Jaipur National University has been awarded 'Pride of the Nation' in the III edition of India's Greatest Leaders 2017-18. His contributions were counted amongst the stalwarts of India namely Honorable Prime Minister Sh. Narendra Modi.As per NIRF rankings 2024, Jaipur National University (JNU) was ranked 10th in the overall category. Apart from this, JNU also ranked 2nd in the university category in 2024",
-        established: 1961,
+        established: 2007,
         type: "Public Institute of National Importance",
         campus: "320 acres",
         details: "The Jaipur National University placement cell is known as the Corporate Resource Cell. The Corporate Resource Cell of JNU Jaipur trains the students and makes them employable. Jaipur National University placement cell offers facilities like soft skills training, job trend tracking, writing and oral skill development, personality development, and campus placement. The Jaipur National University placement cell also organizes group discussions and mock interviews. Dr. Purnima Nag is the director of the JNU Jaipur placement cell. The Corporate Resource Cell of this university follows the following placement process to help students get their desired jobs.First, they create student profiles on the university website. Then, they organize workshops and industry visits to familiarize students with the work environment, then they invite companies for recruitment, and then the placement cell trains students according to their job goals. They also help students understand the job roles. Then, they encourage them to complete industry-related projects and finally help students prepare before the interview round.",
@@ -102,7 +102,7 @@ const CollegeDetailPage = () => {
         location: "Palampur, India",
         rating: 4.9,
         reviews: 180,
-        approvals: ["UGC", "NAAC", "AICTE"],
+        approvals: ["UGC","AICTE"],
         images: [
           "https://images.shiksha.com/mediadata/images/1536061475phpsqXSFn.png",
           "https://www.srisaiuniversity.org/downloads/Block-A.jpg",
@@ -113,7 +113,7 @@ const CollegeDetailPage = () => {
         established: 1961,
         type: "Public Autonomous Institute",
         campus: "106 acres",
-        accreditation: "EQUIS",
+        accreditation: "NAAC",
         placementStats: {
           avgSalary: "40%",
           hiringPartners: "150+",
