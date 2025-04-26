@@ -19,7 +19,6 @@ interface UniversityCardProps {
   image: string;
   courses: string[];
 }
-
 const UniversityCard = (
   { id, name, location, rating, image, courses }: UniversityCardProps = {
     id: "default-university",
@@ -38,7 +37,7 @@ const UniversityCard = (
   };
 
   return (
-    <Card className="min-w-[300px] flex flex-col h-full transition-all duration-300 hover:shadow-lg bg-white">
+    <Card className="min-w-[calc(100%-1rem)] md:min-w-[calc(33.333%-1rem)] flex flex-col h-full transition-all duration-300 hover:shadow-lg bg-white">
       <div
         className="h-40 w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${image})` }}
@@ -87,22 +86,22 @@ const TopUniversities = () => {
 
   const universities = [
     {
-      id: "iit-delhi",
-      name: "IIT Delhi",
-      location: "New Delhi, India",
+      id: "jnu-jaipur",
+      name: "Jaipur National University",
+      location: "Jaipur, India",
       rating: 4.8,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwpwXoBWpvgu1xymmbEUZh0hIHNnw_GzFzew&s",
+        "https://www.jnujaipur.ac.in/Uploads/image/522imguf_career.webp",
       courses: ["Engineering", "Technology", "Research"],
     },
     {
-      id: "iim-ahmedabad",
-      name: "IIM Ahmedabad",
-      location: "Ahmedabad, Gujarat",
+      id: "srisai-palampur",
+      name: "Sri Sai University",
+      location: "Palampur, India",
       rating: 4.9,
       image:
-        "https://currentaffairs.adda247.com/wp-content/uploads/multisite/sites/5/2025/04/10135125/IIM-Ahmedabad-to-Set-Up-Campus-in-Dubai.jpg",
-      courses: ["MBA", "Management", "Education"],
+        "https://www.srisaiuniversity.org/downloads/Block-A.jpg",
+      courses: ["MBA", "Engineering", "Technology"],
     },
     {
       id: "aiims-delhi",
@@ -158,10 +157,10 @@ const TopUniversities = () => {
     <section className="py-16 px-4 bg-gray-50 relative">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-4xl md:text-4xl font-bold mb-4">
             Top Universities & Colleges
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto font-semibold">
+          <p className="text-gray-600 text-2xl mx-auto font-normal">
             Explore the best educational institutions across India to find your
             perfect fit for higher education.
           </p>
@@ -197,10 +196,10 @@ const TopUniversities = () => {
 
         <div className="text-center mt-8">
           <Button
-            onClick={() => (window.location.href = "/courses")}
-            className="bg-primary hover:bg-primary/90 text-white"
+            onClick={() => (window.location.href = "/AllColleges")}
+            className="bg-primary bg-blue-500  text-white"
           >
-            Explore All Courses
+            Explore All Colleges
           </Button>
         </div>
       </div>

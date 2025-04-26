@@ -18,8 +18,8 @@ interface ReviewsSectionProps {
 }
 
 const ReviewsSection = ({
-  collegeId = "iit-delhi",
-  reviews = collegeId === "iit-delhi" ? [
+  collegeId = "jnu-jaipur",
+  reviews = collegeId === "jnu-jaipur" ? [
     {
       id: "1",
       name: "Raj Kumar",
@@ -27,7 +27,7 @@ const ReviewsSection = ({
       date: "May 15, 2023",
       rating: 5,
       comment:
-        "IIT Delhi provided me with an excellent foundation in engineering. The professors are highly knowledgeable and the research facilities are world-class.",
+        "JNU Jaipur provided me with an excellent foundation in engineering. The professors are highly knowledgeable and the research facilities are world-class.",
       course: "B.Tech Computer Science",
     },
     {
@@ -50,36 +50,36 @@ const ReviewsSection = ({
         "The academic environment is challenging but rewarding. The exposure to cutting-edge technology and research opportunities is incredible.",
       course: "B.Tech Mechanical Engineering",
     },
-  ] : collegeId === "aiims-delhi" ? [
+  ] : collegeId === "srisai-palampur" ? [
     {
       id: "1",
-      name: "Dr. Sanjay Patel",
+      name: "Sanjay Patel",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=sanjay",
       date: "June 15, 2023",
       rating: 5,
       comment:
-        "AIIMS Delhi offers world-class medical education. The clinical exposure and research opportunities are exceptional. The faculty is outstanding.",
-      course: "MBBS",
+        "SSU Palampur offers world-class Engineering education. The clinical exposure and research opportunities are exceptional. The faculty is outstanding.",
+      course: "Electrical Engineering",
     },
     {
       id: "2",
-      name: "Dr. Meera Reddy",
+      name: "Meera Reddy",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=meera",
       date: "May 25, 2023",
       rating: 4.5,
       comment:
         "The practical training and patient interaction at AIIMS Delhi is unmatched. The hospital provides exposure to diverse medical cases.",
-      course: "MD Internal Medicine",
+      course: "Agriculture",
     },
     {
       id: "3",
-      name: "Dr. Arun Kumar",
+      name: "Arun Kumar",
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=arun",
       date: "April 20, 2023",
       rating: 5,
       comment:
-        "The research facilities and medical infrastructure are top-notch. The academic environment pushes you to excel in medical practice.",
-      course: "MS Surgery",
+        "The research facilities and education infrastructure are top-notch. The academic environment pushes you to excel in research practice.",
+      course: "Research",
     },
   ] : [
     {

@@ -116,14 +116,7 @@ const Footer = () => {
                   College Admission
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Study Abroad
-                </a>
-              </li>
+              
               <li>
                 <a
                   href="#"
@@ -132,14 +125,7 @@ const Footer = () => {
                   Scholarship Guidance
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Entrance Exam Prep
-                </a>
-              </li>
+             
             </ul>
           </div>
 

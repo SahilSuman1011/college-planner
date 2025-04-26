@@ -125,32 +125,32 @@ const ReviewsSection = ({
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
               alt="Amazon"
-              className="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+              className="h-8"
             />
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/2560px-AMD_Logo.svg.png"
               alt="AMD"
-              className="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+              className="h-8"
             />
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Cisco_logo.svg/1280px-Cisco_logo.svg.png"
               alt="Cisco"
-              className="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+              className="h-8"
             />
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbcPGVoFoAQ1kdwbiQRsHem99eTMUiysMRDA&s"
               alt="Dropcam"
-              className="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+              className="h-8"
             />
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Logitech_logo.svg/2560px-Logitech_logo.svg.png"
               alt="Logitech"
-              className="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+              className="h-8"
             />
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2560px-Spotify_logo_without_text.svg.png"
               alt="Spotify"
-              className="h-8 grayscale opacity-70 hover:opacity-100 transition-opacity"
+              className="h-8"
             />
           </div>
         </div>
