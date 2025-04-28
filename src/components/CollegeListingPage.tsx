@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
+import Footer from "./Footer";
 import {
   Card,
   CardContent,
@@ -245,46 +246,51 @@ const CollegeListingPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="container mx-auto">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold">
-            Top Colleges for {getCourseTitle(courseId || "")}
-          </h1>
-          <Button
-            variant="outline"
-            onClick={() => navigate("/courses")}
-            className="hover:bg-primary hover:text-white"
-          >
-            Back to Courses
-          </Button>
-        </div>
-
-        {colleges.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {colleges.map((college) => (
-              <CollegeCard key={college.id} {...college} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-12">
-            <h2 className="text-2xl font-semibold mb-4">
-              No colleges found for this course
-            </h2>
-            <p className="text-gray-600 mb-6">
-              We're currently updating our database. Please check back later or
-              explore other courses.
-            </p>
+    <>
+      <div className="min-h-screen bg-gray-50 py-12 px-4">
+        <div className="container mx-auto">
+          <div className="flex justify-between items-center mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold">
+              Top Colleges for {getCourseTitle(courseId || "")}
+            </h1>
             <Button
+              variant="outline"
               onClick={() => navigate("/courses")}
-              className="bg-primary hover:bg-primary/90"
+              className="hover:bg-primary hover:text-white"
             >
-              Explore Other Courses
+              Back to Courses
             </Button>
           </div>
-        )}
+
+          {colleges.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {colleges.map((college) => (
+                <CollegeCard key={college.id} {...college} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <h2 className="text-2xl font-semibold mb-4">
+                No colleges found for this course
+              </h2>
+              <p className="text-gray-600 mb-6">
+                We're currently updating our database. Please check back later or
+                explore other courses.
+              </p>
+              <Button
+                onClick={() => navigate("/courses")}
+                className="bg-primary hover:bg-primary/90"
+              >
+                Explore Other Courses
+              </Button>
+            </div>
+          )}
+        </div>
+        <br/>
       </div>
-    </div>
+      <Footer/>
+    </>
+    
   );
 };
 

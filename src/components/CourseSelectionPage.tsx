@@ -574,6 +574,7 @@ const CourseSelectionPage = () => {
 
         </div>
       </div>
+     
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { Button } from "./ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import ReviewsSection from "./ReviewsSection";
 import Footer from "./Footer";
-
 import {
   Star,
   MapPin,
@@ -18,6 +17,17 @@ import {
   ArrowLeft,
   ChevronRight,
   Check,
+  Download,
+  Clock,
+  Users,
+  Home,
+  GraduationCap,
+  BookOpen,
+  Coffee,
+  Wifi,
+  Heart,
+  LucideHeart,
+  Info as InfoIcon
 } from "lucide-react";
 
 const CollegeDetailPage = () => {
@@ -247,6 +257,9 @@ const CollegeDetailPage = () => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setActiveTab(sectionId);
   };
+  
+
+  
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -373,7 +386,43 @@ const CollegeDetailPage = () => {
                 ))}
               </div>
             </div>
-
+            {/* Tab Navigation */}
+            <div className="bg-white p-4 rounded-lg shadow-sm mb-6 sticky top-20 z-10">
+              <Tabs defaultValue="about" className="w-full">
+                <TabsList className="grid w-full grid-cols-5">
+                  <TabsTrigger 
+                    value="about"
+                    onClick={() => scrollToSection('about')}
+                  >
+                    About
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="courses"
+                    onClick={() => scrollToSection('courses')}
+                  >
+                    Courses
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="facilities"
+                    onClick={() => scrollToSection('facilities')}
+                  >
+                    Facilities
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="placements"
+                    onClick={() => scrollToSection('placements')}
+                  >
+                    Placements
+                  </TabsTrigger>
+                  <TabsTrigger 
+                    value="reviews"
+                    onClick={() => scrollToSection('reviews')}
+                  >
+                    Reviews
+                  </TabsTrigger>
+                </TabsList>
+              </Tabs>
+            </div>
             {/* About Section */}
             <section id="about" className="bg-white p-6 rounded-lg shadow-sm mb-6">
               <h2 className="text-2xl font-bold mb-4">About {college.name}</h2>
@@ -509,20 +558,67 @@ const CollegeDetailPage = () => {
               </div>
             </section>
 
-            {/* Reviews Section */}
             <section id="reviews" className="bg-white p-6 rounded-lg shadow-sm mb-6">
-              <h2 className="text-2xl font-bold mb-6">Student Reviews</h2>
-              <div className="w-full max-w-full overflow-x-hidden">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-bold">Student Reviews</h2>
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Write a review
+                </Button>
+              </div>
+
+              {/* Rating Stats */}
+              <div className="flex gap-8 mb-8">
+                <div className="flex-1">
+                  {/* Rating Distribution */}
+                  <div className="space-y-2">
+                    {[5,4,3,2,1].map(rating => (
+                      <div key={rating} className="flex items-center gap-2">
+                        <span className="w-12 text-sm text-gray-600">{rating} star</span>
+                        <div className="flex-1 bg-gray-200 h-2.5 rounded-full">
+                          <div 
+                            className="bg-yellow-400 h-full rounded-full" 
+                            style={{width: rating === 5 ? '74%' : rating === 4 ? '20%' : '2%'}}
+                          />
+                        </div>
+                        <span className="w-12 text-sm text-gray-600 text-right">
+                          {rating === 5 ? '74%' : rating === 4 ? '20%' : '2%'}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border-l border-gray-200 pl-8">
+                  <div className="text-center">
+                    <div className="text-5xl font-bold text-gray-900 mb-2">4.6</div>
+                    <div className="flex items-center justify-center gap-1 mb-1">
+                      {[1,2,3,4,5].map(star => (
+                        <Star key={star} className="h-5 w-5 text-yellow-400" fill="#FACC15" />
+                      ))}
+                    </div>
+                    <div className="text-sm text-gray-500">out of 5</div>
+                    <div className="text-sm text-gray-500 mt-1">(567 reviews)</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Reviews List */}
+              <div className="divide-y divide-gray-200">
                 <ReviewsSection collegeId={collegeId} />
               </div>
-            </section>
 
-          
-        
+              {/* How ratings calculated info */}
+              <div className="mt-6">
+                <Button variant="link" className="text-blue-600 text-sm flex items-center">
+                  <InfoIcon className="h-4 w-4 mr-1" />
+                  How are ratings calculated?
+                </Button>
+              </div>
+            </section>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
