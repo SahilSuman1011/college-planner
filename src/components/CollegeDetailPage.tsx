@@ -75,6 +75,9 @@ const CollegeDetailPage = () => {
           "Auditorium",
           "Research Labs",
         ],
+
+        hosteldetails:"The University has separate Wi-Fi enabled hostels for boys and girls equipped with an air-cooling system. Facilities such as mess, RO water supply, laundry, 24 hours electricity and water supply has been provided to each and every hostel.",
+      
         PlacementPartners: [
            { name: "Google", logo: "https://storage.googleapis.com/gd-prod/images/f4f4bc5f-904a-4b61-972f-c403bc060679.799a99c1196c2fd4.webp" },
            { name: "Microsoft", logo: "https://msblogs.thesourcemediaassets.com/2012/08/8867.Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg" },
