@@ -328,7 +328,7 @@ const CollegeDetailPage = () => {
                   { id: "facilities", name: "Facilities" },
                   { id: "placements", name: "Placements" },
                   { id: "reviews", name: "Reviews" },
-                  { id: "contact", name: "Contact" },
+                  
                 ].map((item) => (
                   <button
                     key={item.id}
